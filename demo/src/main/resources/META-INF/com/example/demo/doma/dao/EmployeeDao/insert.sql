@@ -1,0 +1,1 @@
+insert into employee values(/* entity.id */0, /* entity.name */'0', /* entity.age */0, /* entity.contents */'{}'::jsonb, /* entity.version */0);
