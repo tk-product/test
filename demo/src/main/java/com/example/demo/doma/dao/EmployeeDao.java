@@ -24,6 +24,18 @@ public interface EmployeeDao {
     @Update(sqlFile = true, ignoreVersion = false, sqlLog = SqlLogType.FORMATTED)
     int update(Employee entity);
 
+    @BatchInsert(sqlFile = true, sqlLog = SqlLogType.FORMATTED)
+    int[] insert(List<Employee> entity);
+
+    @BatchUpdate(sqlFile = true, ignoreVersion = false, sqlLog = SqlLogType.FORMATTED)
+    int[] update(List<Employee> entity);
+
+//    @BatchInsert(sqlLog = SqlLogType.FORMATTED)
+//    int[] insert(List<Employee> entity);
+//
+//    @BatchUpdate(sqlLog = SqlLogType.FORMATTED)
+//    int[] update(List<Employee> entity);
+
     @Delete
     int delete(Employee entity);
 

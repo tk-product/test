@@ -2,6 +2,8 @@ package com.example.demo.doma.entity;
 
 import org.seasar.doma.*;
 
+import java.util.List;
+
 @Entity
 public class Employee {
 
