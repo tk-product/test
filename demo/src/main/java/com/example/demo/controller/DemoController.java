@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.CustomPropertiesLoader;
 import com.example.demo.doma.dao.EmployeeDao;
 import com.example.demo.doma.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,12 @@ public class DemoController {
     @Autowired
     EmployeeDao employeeDao;
 
+    @Autowired
+    CustomPropertiesLoader loader;
+
     @GetMapping("/hello")
     public String hello(Model model) {
+        loader.loadProperties("sample.yml", "test");
 //        model.addAttribute("message", "");
         Employee employee = employeeDao.selectById(1);
         System.out.println("★★selectById★★ " + employee.toString());
