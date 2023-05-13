@@ -10,7 +10,7 @@ import java.util.Properties;
 @Component
 public class CustomPropertiesLoader {
     public String loadProperties(String fileName, String propertyKey) {
-        
+
         String propertyValue = null;
         try {
             ClassPathResource resource = new ClassPathResource(fileName);
